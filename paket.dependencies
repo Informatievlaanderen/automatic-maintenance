@@ -1,0 +1,5 @@
+framework: netcoreapp31
+source https://api.nuget.org/v3/index.json
+
+// VBR STUFF
+nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 5.0.2
