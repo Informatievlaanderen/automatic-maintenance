@@ -1,7 +1,7 @@
 # Based on https://github.com/fabiang/docker-sqlcmd
 FROM ubuntu:20.04
 
-LABEL maintainer "agentschap Informatie Vlaanderen <basisregisters@vlaanderen.be>"
+LABEL maintainer "Digitaal Vlaanderen <digitaal.vlaanderen@vlaanderen.be>"
 
 COPY / /app
 WORKDIR /app
