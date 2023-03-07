@@ -4,7 +4,7 @@ registries=("municipality" "streetname" "address" "building" "postal" "parcel" "
 
 for registry in ${registries[@]}
 do
-    dbs=("${registry}_registry" "${registry}_registry_events")
+    dbs=("${registry}-registry" "${registry}-registry-events")
 
     for db in ${dbs[@]}
     do
