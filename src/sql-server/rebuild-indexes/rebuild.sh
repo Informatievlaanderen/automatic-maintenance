@@ -21,7 +21,7 @@ do
             -S ${!server} \
             -U ${!user} \
             -P ${!password} \
-            -d ${!registry} \
+            -d $db \
             -I `# set quoted_indentifier` \
             -i ./rebuild.sql
 
