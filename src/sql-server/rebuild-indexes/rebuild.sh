@@ -1,33 +1,30 @@
 #!/bin/bash
 
-databases=(
-    "address-registry-events"
-    "address-registry"
-    "building-registry-events"
-    "building-registry"
-    "municipality-registry-events"
-    "municipality-registry"
-    "parcel-registry-events"
-    "parcel-registry"
-    "postal-registry-events"
-    "postal-registry"
-    "streetname-registry-events"
-    "streetname-registry"
-    "road-registry-events"
-    "road-registry"
-)
+registries=("municipality" "streetname" "address" "building" "postal" "parcel" "road")
 
-for db in ${databases[@]}
+for registry in ${registries[@]}
 do
-    echo -e "\nStart rebuild indexes for $db"
+    dbs=("${registry}_registry" "${registry}_registry_events")
 
-    sqlcmd \
-        -S $db_server `# sql-server address` \
-        -U $db_user \
-        -P $db_password \
-        -d $db `# set database (USE [$db])` \
-        -I `# set quoted_indentifier` \
-        -i ./rebuild.sql `#use script`
+    for db in ${dbs[@]}
+    do
+        server="db_${registry}_server"
+        user="db_${registry}_user"
+        password="db_${registry}_password"
 
-    echo -e "Finished rebuilding indexes for $db\n"
+        echo -e "\nRebuild indexes for $db"  
+
+        echo "Server: " ${!server}
+        echo "User": ${!user}
+
+        sqlcmd \
+            -S ${!server} \
+            -U ${!user} \
+            -P ${!password} \
+            -d ${!registry} \
+            -I `# set quoted_indentifier` \
+            -i ./rebuild.sql
+
+        echo -e "Finished rebuilding indexes for $db\n"     
+    done
 done
