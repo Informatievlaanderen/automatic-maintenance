@@ -18,7 +18,7 @@ do
         echo "User": ${!user}
 
         sqlcmd \
-            -S ${!server} \
+            -S ${!server} `# sql-server address`\
             -U ${!user} \
             -P ${!password} \
             -d $db `# set database (USE [$db])` \
