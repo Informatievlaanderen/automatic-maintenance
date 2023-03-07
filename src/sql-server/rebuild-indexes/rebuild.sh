@@ -21,9 +21,9 @@ do
             -S ${!server} \
             -U ${!user} \
             -P ${!password} \
-            -d $db \
+            -d $db `# set database (USE [$db])` \
             -I `# set quoted_indentifier` \
-            -i ./rebuild.sql
+            -i ./rebuild.sql `#use script`
 
         echo -e "Finished rebuilding indexes for $db\n"     
     done
