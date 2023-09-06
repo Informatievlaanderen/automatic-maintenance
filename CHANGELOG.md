@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.1.7...v2.2.0) (2023-09-06)
+
+
+### Features
+
+* update statistics + increase sql login timeout ([dd1fb55](https://github.com/informatievlaanderen/automatic-maintenance/commit/dd1fb55dfc101bba85611b0870dde6e39cce28e5))
+
 ## [2.1.7](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.1.6...v2.1.7) (2023-06-16)
 
 
