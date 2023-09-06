@@ -23,6 +23,7 @@ do
             -P ${!password} \
             -d $db `# set database (USE [$db])` \
             -I `# set quoted_indentifier` \
+            -l 60 `# login timeout` \
             -i ./rebuild.sql `#use script`
 
         echo -e "Finished rebuilding indexes for $db\n"     
