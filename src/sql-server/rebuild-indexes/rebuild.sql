@@ -20,8 +20,5 @@ BEGIN
      FETCH NEXT FROM Cur INTO @Sql
 END
 
--- Update statistics for all tables
-EXEC sp_MSforeachtable 'UPDATE STATISTICS ? WITH FULLSCAN'
-
 CLOSE Cur
 DEALLOCATE Cur;
