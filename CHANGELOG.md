@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.2.1...v2.2.2) (2024-02-21)
+
+
+### Bug Fixes
+
+* **bump:** use new pipeline test ([70984fd](https://github.com/informatievlaanderen/automatic-maintenance/commit/70984fdbdb97636c1d216b3e592b453cf5075234))
+
 ## [2.2.1](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.2.0...v2.2.1) (2023-09-06)
 
 
