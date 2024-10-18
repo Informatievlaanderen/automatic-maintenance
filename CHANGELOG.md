@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.2.2...v2.2.3) (2024-10-18)
+
+
+### Bug Fixes
+
+* add brackets for long index names ([e49625b](https://github.com/informatievlaanderen/automatic-maintenance/commit/e49625b9fb704c0434f54f9715b203d2fcbe05f6))
+
 ## [2.2.2](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.2.1...v2.2.2) (2024-02-21)
 
 
