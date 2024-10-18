@@ -1,7 +1,7 @@
 DECLARE @Sql NVARCHAR(MAX);
 
 DECLARE Cur CURSOR LOCAL FAST_FORWARD FOR
-    SELECT 'ALTER INDEX ' + I.name + ' ON ' + S.name + '.' + T.name + ' REBUILD' AS 'Statement'
+    SELECT 'ALTER INDEX [' + I.name + '] ON ' + S.name + '.' + T.name + ' REBUILD' AS 'Statement'
     FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL, NULL, NULL) AS DDIPS
     INNER JOIN sys.tables T ON T.object_id = DDIPS.object_id
     INNER JOIN sys.schemas S ON T.schema_id = S.schema_id
