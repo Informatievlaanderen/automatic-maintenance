@@ -1,5 +1,5 @@
 # Based on https://github.com/fabiang/docker-sqlcmd
-FROM ubuntu:20.04
+FROM ubuntu:23.04
 
 LABEL maintainer "Digitaal Vlaanderen <digitaal.vlaanderen@vlaanderen.be>"
 
