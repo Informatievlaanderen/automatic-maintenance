@@ -26,6 +26,6 @@ do
             -l 60 `# login timeout` \
             -i ./rebuild.sql `#use script`
 
-        echo -e "Finished rebuilding indexes for $db\n"     
+        echo -e "Finished rebuilding indexes for $db\n"
     done
 done
