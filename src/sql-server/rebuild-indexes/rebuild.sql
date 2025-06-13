@@ -10,6 +10,7 @@ DECLARE Cur CURSOR LOCAL FAST_FORWARD FOR
     WHERE DDIPS.database_id = DB_ID()
     AND avg_fragmentation_in_percent > 30
     AND I.name IS NOT NULL
+    AND T.is_ms_shipped = 0  -- Skip system tables
 
 OPEN Cur
   FETCH NEXT FROM Cur INTO @Sql
