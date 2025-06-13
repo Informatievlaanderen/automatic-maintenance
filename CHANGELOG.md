@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/informatievlaanderen/automatic-maintenance/compare/v3.0.0...v3.0.1) (2025-06-13)
+
+
+### Bug Fixes
+
+* dockerfile ([fc34a86](https://github.com/informatievlaanderen/automatic-maintenance/commit/fc34a86032a333bd4e4e8b97aab68a090820635e))
+
 # [3.0.0](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.2.3...v3.0.0) (2025-06-13)
 
 
