@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.2.3...v3.0.0) (2025-06-13)
+
+
+### Features
+
+* upgrade dockerfile + remove paket+fake ([9694890](https://github.com/informatievlaanderen/automatic-maintenance/commit/9694890e0a5aef7ffdae368ca25680d76326ed9c))
+
+
+### BREAKING CHANGES
+
+* new base image
+
 ## [2.2.3](https://github.com/informatievlaanderen/automatic-maintenance/compare/v2.2.2...v2.2.3) (2024-10-18)
 
 
