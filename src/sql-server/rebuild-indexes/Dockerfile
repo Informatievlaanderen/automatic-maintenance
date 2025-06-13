@@ -44,12 +44,18 @@ RUN go build -o sqlcmd \
 
 FROM alpine
 
+RUN apk add --no-cache bash dos2unix
+
 COPY --from=build /tmp/gosqlcmd/sqlcmd /usr/local/bin/sqlcmd
 COPY --from=build /tmp/gosqlcmd/LICENSE /usr/share/licenses/sqlcmd/LICENSE
 
-COPY / /app
+COPY rebuild.sh /app/rebuild.sh
+COPY rebuild.sql /app/rebuild.sql
 WORKDIR /app
 
-RUN chmod +x ./rebuild.sh
+# Fix line endings and make executable
+RUN dos2unix /app/rebuild.sh && \
+    chmod +x /app/rebuild.sh && \
+    ls -la /app/rebuild.sh
 
-ENTRYPOINT ["./rebuild.sh"]
+ENTRYPOINT ["/app/rebuild.sh"]
