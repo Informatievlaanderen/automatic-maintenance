@@ -42,9 +42,10 @@ RUN go build -o sqlcmd \
     -ldflags="-X main.version=$GO_SQLCMD_VERSION" \
     /tmp/gosqlcmd/cmd/modern
 
-FROM alpine
+FROM alpine:latest
 
-RUN apk add --no-cache bash dos2unix
+RUN apk add --no-cache bash dos2unix && \
+    apk upgrade --no-cache
 
 COPY --from=build /tmp/gosqlcmd/sqlcmd /usr/local/bin/sqlcmd
 COPY --from=build /tmp/gosqlcmd/LICENSE /usr/share/licenses/sqlcmd/LICENSE
