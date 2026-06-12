@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/informatievlaanderen/automatic-maintenance/compare/v3.0.1...v3.1.0) (2026-06-12)
+
+
+### Features
+
+* bump dev dep + fix docker file ([3c93cdc](https://github.com/informatievlaanderen/automatic-maintenance/commit/3c93cdc5d5de8a14c35afa7a4034091fbd8cb554))
+
 ## [3.0.1](https://github.com/informatievlaanderen/automatic-maintenance/compare/v3.0.0...v3.0.1) (2025-06-13)
 
 
